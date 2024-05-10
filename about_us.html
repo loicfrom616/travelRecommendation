@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-    <title>Travel-recommendation</title>
+    <title>About us - Horizon</title>
     <style>
         * {
             color:white;
@@ -9,13 +9,23 @@
         .portrait {
             display:grid;
             grid-template-columns : 20% 80%; 
+            background:rgba(0,0,0,0.3);
+            width:250px;
+            border-radius:10px;
         }
         
+        .portrait > img {
+            width:30px;
+            height:auto;
+            padding:15px;
+        }
+
         .title {
             background: blue;
             border-radius: 15px;
             width: 180px;
             text-align:center;
+            border: solid white 1px;
         }
     </style>
     
@@ -28,7 +38,7 @@
             <div id="links" style="margin:5px">
                 <a id="home" class="navbarContent" style="text-decoration:none; color:white; padding:15px" href="./travel_recommendation.html">Home</a>
                 <a id="aboutUs" class="navbarContent" style="text-decoration:none; color:white; padding:15px" href="./about_us.html">About us</a>
-                <a id="contactUs" class="navbarContent" style="text-decoration:none; color:white; padding:15px" href="">Contact us</a>
+                <a id="contactUs" class="navbarContent" style="text-decoration:none; color:white; padding:15px" href="./contact_us.html">Contact us</a>
             </div>
             <div id"searchContainer style="background:white; padding:5px; border-radius:20px;visibility:hidden" >
                 <input type="text" id="searchDestinationField" placeholder="Enter a destination or keyword" style="width:200px;border:none"></input>
@@ -44,33 +54,33 @@
         </div> 
         <div style="width:80%;height:auto;top:55%;left:15%;position:absolute; display:flex;justify-content:space-evenly">
             <h2 style="font-size:60px;color:white;width:120px">Our Team</h2>
-            <div class="portrait" style="background:rgba(0,0,0,0.3);width:250px;border-radius:10px">
-                <img src="./user.png" style="width:30px;height:auto;padding:15px">
+            <div class="portrait">
+                <img src="./user.png">
                 <div style="grid-column:2;margin-top:20px">
                     <h3 style="">John Michael </h3>
-                    <p>presentation team member</p>
+                    <p>Mr Michael acts as : </p>
                     <div class="title">CEO</div>
                 </div>
             </div>
-            <div class="portrait" style="background:rgba(0,0,0,0.3);width:250px;border-radius:10px">
-                <img src="./user.png" style="width:30px;height:auto;padding:15px">
+            <div class="portrait">
+                <img src="./user.png">
                 <div style="grid-column:2;margin-top:20px">
-                    <h3 style="">John Michael </h3>
-                    <p>presentation team member</p>
-                    <div class="title">CEO</div>
+                    <h3 style="">Michael Michael </h3>
+                    <p>Mr Michael acts as : </p>
+                    <div class="title">CFO</div>
                 </div>
             </div>
-            <div class="portrait" style="background:rgba(0,0,0,0.3);width:250px;border-radius:10px">
-                <img src="./user.png" style="width:30px;height:auto;padding:15px">
+            <div class="portrait">
+                <img src="./user.png">
                 <div style="grid-column:2;margin-top:20px">
                     <h3 style="">David Michael </h3>
-                    <p>presentation team member</p>
-                    <div class="title">CEO</div>
+                    <p>Mr Michael acts as : </p>
+                    <div class="title">COO</div>
                 </div>
             </div>
             
         </div>       
 
-        <script src="./travel_recommendation.js"</srcipt>
+        <script src="./travel_recommendation.js"</script>
     </body>
 </html>
