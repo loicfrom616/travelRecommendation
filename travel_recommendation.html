@@ -2,11 +2,20 @@
 <html lang="eng">
 <head>
     <title>Travel-recommendation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            color:white;
+        }
 
-    
+        #searchContainer > button {
+            background:#5F9EA0;
+            border-radius:5px;
+        }
+    </style>
 </head>
-    <body style="width:100%; background-image:url(./backMain.jpg); background-size:cover; background-attachment:fixed">
-        <div id="navbar" style="background:black; display:flex; justify-content:space-between; align-items:center; width:100%">
+    <body style="width:100%;left:0px; background-image:url(./backMain.jpg); background-size:cover; background-attachment:fixed">
+        <div id="navbar" style="background:black; position:absolute;display:flex; justify-content:space-between; align-items:center; width:100%;left:0px;top:0px">
             <div id="logo">
                 <img src="./logo.png" style="height:80px">
             </div>
@@ -15,16 +24,17 @@
                 <a id="aboutUs" class="navbarContent" style="text-decoration:none; color:white; padding:15px" href="./about_us.html">About us</a>
                 <a id="contactUs" class="navbarContent" style="text-decoration:none; color:white; padding:15px" href="./contact_us.html">Contact us</a>
             </div>
-            <div id"searchContainer style="background:white; padding:5px; border-radius:20px">
-                <input type="text" id="searchDestinationField" placeholder="Enter a destination or keyword" style="width:200px;border:none"></input>
-                <button style="">Search</button>
+            <div id="searchContainer" style="background:white; padding:5px; border-radius:20px;width:400px">
+                <input type="text" id="searchDestinationField" placeholder="Enter a destination or keyword" style="width:250px;border:none;color:black"></input>
+                <button>Search</button>
                 <button>Reset</button>
             </div>
         </div>
         <div id="introduction" style="position:absolute;top:40%;left:20%">
             <h1 style="color:white;font-size:40px">How far can you dream ?</h1>
-            <p style="width:300px;height:auto;color:white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    
+            <p style="width:300px;height:auto;color:white">Let's find together that special place.<br> For a one-day escape or a lifetime vacation.<br>In a lakeside mansion or a cabin hidden from the world.<br>Horizon team has helped 2 millions dreamers finding their perfect resort.</p>
+        </div>
+
 
         <script src="./travel_recommendation.js"</script>
     </body>
