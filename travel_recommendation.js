@@ -1,34 +1,36 @@
-fetch("travel_recommendation_api.json")
+const userInput = document.getElementById('searchDestinationField').value.tolowercase;
+
+function searchDestination () {
+    let places = [];
+
+    fetch("travel_recommendation_api.json")
     .then(response => response.json())
     .then(data => {
-        let places = [];
-
-        for (let i = 0;i < data.beaches.length;i++){
-            places.push(data.beaches[i].name);
-            console.log(places);        
-        }
-        for (let y = 0;y < data.countries.length;y++){
-            places.push(data.countries[y].name);
-            console.log(places);        
-        }
-        for (let x = 0;x < data.temples.length;x++){
-            places.push(data.temples[x].name);
-            console.log(places);        
-        }
-        console.log(data)
-         }
-        )        
+        switch (userInput) {
+        case "beach" : 
+            for (let i = 0;i < data.beaches.length;i++){
+            places.push(data.beaches[i].name);}
+        break;
+        case "temples" || "temple" : 
+            for (let i = 0;i < data.temples.length;i++){
+            places.push(data.temples[i].name);}
+        break;
+        case "countries" || "country" : 
+            for (let i = 0;i < data.countries.length;i++){
+            places.push(data.countries[i].name);}
+        break;
+        default:
+            console.log("no match, sorry")       
+        }})        
     .catch(error => console.log(error));
+
+    console.log(places)
+}
 
 const searchButton = document.getElementById('searchButton');
 const resetButton = document.getElementById('resetButton');
 
-searchButton.addEventListener('click', (e)=>{
+searchButton.addEventListener('click', ()=>{
     searchButton.preventdefault;
-    ;
-    
+    searchDestination();    
 })
-
-const searchClick = function () {
-
-};
