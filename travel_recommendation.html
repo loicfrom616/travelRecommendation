@@ -19,10 +19,11 @@
         width:600px;
         height:auto;
         background: rgba(0,0,99,0.3);
-        z-index:4;
+        z-index:2;
         box-shadow: 0 3px 8px rgba(0 0 0);
         display:block;
         transition-delay:0.25;
+        backdrop-filter: blur(10px);
         }
 
         #resultContainer > img{
@@ -32,11 +33,15 @@
             object-fit: cover;
             border-radius: 8px;
         }
+        #resultContainer > p, h2 {
+            padding:5px;
+
+        }
         .displayResult{
             width:600px;
             height:auto;
             background:white;
-            z-index: 4;            
+            z-index: 2;            
             margin-bottom:10px;
             display:block;
             border-radius: 8px;
@@ -66,7 +71,7 @@
     </style>
 </head>
     <body style="width:100%;left:0px; background-image:url(./backMain.jpg); background-size:cover; background-attachment:fixed">
-        <div id="navbar" style="background:black; position:fixed;display:flex; justify-content:space-between; align-items:center; width:100%;heigth:10%;left:0px;top:0px">
+        <div id="navbar" style="z-index:3;background:black; position:fixed;display:flex; justify-content:space-between; align-items:center; width:100%;heigth:10%;left:0px;top:0px">
             <div id="logo">
                 <img src="./logo.png" style="height:80px">
             </div>
@@ -81,7 +86,7 @@
                 <button id="resetButton">Clear</button>
             </div>
         </div>
-        <div id="introduction" style="position:absolute;top:40%;left:20%">
+        <div id="introduction" style="position:fixed;top:40%;left:20%">
             <h1 style="color:white;font-size:40px">How far can you dream ?</h1>
             <p style="width:300px;height:auto;color:white">Let's find together that special place.<br> For a one-day escape or a lifetime vacation.<br>In a lakeside mansion or a cabin hidden from the world.<br>Horizon team has helped 2 millions dreamers finding their perfect resort.</p>
         </div>

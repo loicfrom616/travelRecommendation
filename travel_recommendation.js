@@ -15,11 +15,11 @@ function searchDestination () {
                 places.push(data.beaches[i].name);
 
                 resultContainer.innerHTML += `<img src="${data.beaches[i].imageUrl}"></img><br>
-                                              <h2>${data.beaches[i].name}</h2>`;
+                                              <h2>${data.beaches[i].name}</h2>
+                                              <p>${data.beaches[i].description}</p>`;
 
                 resultContainer.style.right = "10%";
 
-                // displayResult(data.beaches[i].imageUrl,data.beaches[i].name);
             }
 
                 console.log(data);
@@ -49,27 +49,3 @@ searchButton.addEventListener('click', ()=>{
     searchButton.preventdefault;
     searchDestination();    
 })
-
-const displayResult = function (imageSrc,recommandationName) {
-    const resultContainer = document.getElementById('resultContainer');
-        
-    const showCase =  document.createElement('div');
-    showCase.className = 'displayResult';
-    resultContainer.appendChild(showCase);
-
-    const showImage = document.createElement('img');
-    showImage.className = 'displayImage';
-    showCase.appendChild(showImage);
-    showImage.setAttribute('src',imageSrc);
-
-    const showName = document.createElement('h1');
-    showName.className = 'displayName';
-    showCase.appendChild(showName);
-    showName.innerText = recommandationName;
-
-    const fog =  document.createElement('div');
-    fog.id = 'fog';
-    document.body.appendChild(fog);
-
- 
-  };
