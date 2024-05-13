@@ -15,10 +15,10 @@ function searchDestination () {
                 places.push(data.beaches[i].name);
 
                 resultContainer.innerHTML += `<div class="destinationContainer">
-                                            <img src="${data.beaches[i].imageUrl}"></img><br>
+                                              <img src="${data.beaches[i].imageUrl}"></img><br>
                                               <h2>${data.beaches[i].name}</h2>
                                               <p>${data.beaches[i].description}</p>
-                                              <button class="">
+                                              <button style="margin:5px;width:100px;background:navy;border-radius:5px;border:solid,white">Book now</button>
                                               </div>`;
 
                 resultContainer.style.right = "10%";
@@ -37,6 +37,19 @@ function searchDestination () {
                                               <p>${data.temples[i].description}</p>`;
 
             resultContainer.style.right = "10%";
+
+
+            resultContainer.innerHTML += `<div class="destinationContainer">
+            <img src="${data.beaches[i].imageUrl}"></img><br>
+            <h2>${data.beaches[i].name}</h2>
+            <p>${data.beaches[i].description}</p>
+            <button style="margin:5px;width:100px;background:navy;border-radius:5px;border:solid,white">Book now</button>
+            </div>`;
+
+resultContainer.style.right = "10%";
+
+resultContainer.style.display = "block";
+
             }
             console.log(data);
         break;
@@ -69,22 +82,3 @@ searchButton.addEventListener('click', ()=>{
     searchDestination();    
 });
 
-
-// fetch("travel_recommendation_api.json")
-//     .then(response => response.json())
-//     .then(data => {
-// for (let i = 0;i < data.countries.length;i++){
-//     let recommandedCountries = data.countries[i]     
-//     // console.log(data.countries[i]);
-//     for (let y = 0; y < recommandedCountries.cities.length;y++){
-//         let recommandedCities = recommandedCountries.cities[y];
-//             console.log(recommandedCities);
-//         resultContainer.innerHTML += `<img src="${recommandedCities.imageUrl}"></img><br>
-//         <h2>${recommandedCities.name}</h2>
-//         <p>${recommandedCities.description}</p>`;
-
-// resultContainer.style.right = "10%";
-// }
-//     }
-//     }
-// );
