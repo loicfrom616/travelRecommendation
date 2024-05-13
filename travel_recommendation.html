@@ -34,49 +34,28 @@
             backdrop-filter:blur(10px);
             margin-bottom: 15px;
         }
+        .noMatchContainer {
+            width:95%;
+            height:auto;
+            border-radius: 8px;
+            background: white;
+            backdrop-filter:blur(10px);
+            margin: 15px;
+        }
 
         .destinationContainer > img{
             width:100%;
             height:400px;
             background:none;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 8px 8px 0px 0px ;
         }
         .destinationContainer > p, h2 {
             padding:5px;
             color: black;
 
         }
-        .displayResult{
-            width:600px;
-            height:auto;
-            background:white;
-            z-index: 2;            
-            margin-bottom:10px;
-            display:block;
-            border-radius: 8px;
-        }
-        .displayImage{
-            width:100%;
-            height:65%;
-            background:blue;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .displayName{
-            top:70%;
-            position:absolute;
-        }
-        #fog {
-            position:absolute;
-            top:10%;
-            left:0px;
-            width:100%;
-            height:90%;
-            background:rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
-            z-index:3;
-        }
+         
 
     </style>
 </head>
