@@ -14,11 +14,16 @@ function searchDestination () {
             for (let i = 0;i < data.beaches.length;i++){
                 places.push(data.beaches[i].name);
 
-                resultContainer.innerHTML += `<img src="${data.beaches[i].imageUrl}"></img><br>
+                resultContainer.innerHTML += `<div class="destinationContainer">
+                                            <img src="${data.beaches[i].imageUrl}"></img><br>
                                               <h2>${data.beaches[i].name}</h2>
-                                              <p>${data.beaches[i].description}</p>`;
+                                              <p>${data.beaches[i].description}</p>
+                                              <button class="">
+                                              </div>`;
 
                 resultContainer.style.right = "10%";
+
+                resultContainer.style.display = "block";
             }
                 console.log(data);
         break;
